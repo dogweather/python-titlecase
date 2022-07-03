@@ -23,7 +23,7 @@ else:
     REGEX_AVAILABLE = True
 
 __all__ = ['titlecase']
-__version__ = '2.3.0'
+__version__ = '2.4.0'
 
 SMALL = r'a|an|and|as|at|but|by|en|for|if|in|of|on|or|the|to|v\.?|via|vs\.?'
 PUNCT = r"""!"“#$%&'‘()*+,\-–‒—―./:;?@[\\\]_`{|}~"""
@@ -77,7 +77,7 @@ def set_small_word_list(small=SMALL):
     SUBPHRASE = regex.compile(r'([:.;?!][ ])(%s)' % small)
 
 
-def titlecase(text, callback=None, small_first_last=True):
+def titlecase(text: str, callback=None, small_first_last=True) -> str:
     """
     :param text: Titlecases input text
     :param callback: Callback function that returns the titlecase version of a specific word
